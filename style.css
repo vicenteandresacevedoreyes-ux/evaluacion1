@@ -1,0 +1,72 @@
+.sitio {
+  display: grid;
+grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: 0;
+}
+.site-header  { grid-area: header; }
+.site-sidebar { grid-area: sidebar; }
+.site-main    { grid-area: main; }
+.site-footer  { grid-area: footer; }
+ 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  color: white;
+  padding: 15px 25px;
+}
+.menu {
+  display: flex;
+  gap: 20px;
+}
+.menu a { color: white; text-decoration: none; }
+ 
+/* Sidebar */
+.site-sidebar {
+  background: #34495e;
+  color: white;
+  padding: 30px;
+}
+.site-sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+ 
+/* Contenido principal: posts con Flexbox wrap */
+.site-main { padding: 25px; }
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.post {
+  flex: 1 1 200px;
+  background: #3498db;
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+ 
+/* Footer */
+.site-footer {
+  display: flex;
+  justify-content: center;
+  background: #2c3e50;
+  color: #95a5a6;
+  padding: 15px;
+}
+
+
+
