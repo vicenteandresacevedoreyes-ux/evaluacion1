@@ -1,55 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi blog</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio - vicente acevedo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1></h1>
-    </header>
-  
 <div class="sitio">
   <header class="site-header">
-    <div class="logo">Mi Blog </div>
-    <nav class="menu">
-      <a href="#">habilidades</a>
-      <a href="#">proyectos</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>
- 
-  <aside class="site-sidebar">
-    <h3>sobre mi</h3>
-    <ul>
-      <li>mi nombre es vicente acevedo estudiante de inacap.</li>
-      <h3> mis datos</h3>
-      <li> mi edad: 20</li>
-      <li>mi ciudad: curanilahue</li>
-      <li>email: vicenteandresacevedoreyes@gmail.com</li>
-      <li>carrera: ingieneria en ciberseguridad</li>
-      <h3></h3>
-
-      <li></li>
-    </ul>
-  </aside>
- </aside>
-  <main class="site-main">
-    <h1>mis habilidades</h1>
-    <div class="posts">
-      <article class="post">aprendeido python</article>
-      <article class="post">aprendiendo html</article>
-      <article class="post">aprendiendo javascript</article>
+    <div class="container header-inner">
+      <a href="#home" class="logo"></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
     </div>
+  </header>
+
+  <main id="home">
+    <section id="sobre" class="hero container">
+      <article class="perfil">
+  <img src="avatar.png"alt="logo vicente acevedo" class="avatar"/>
+        <h1>vicente acevedo</h1>
+        <p class="rol">Estudiante de ingieneria en ciberseguridad</p>
+        <p class="bio">Apasionado por crear nuevos proyectos. Actualmente aprendiendo HTML5, CSS y JavaScript.</p>
+      </article>
+
+      <aside class="datos-personales" aria-labelledby="datos-title">
+        <h2 id="datos-title">Sobre Mi</h2>
+        <ul>
+          <li><strong>Edad:</strong> 19 años</li>
+          <li><strong>Ciudad:</strong> curanilahue, Chile</li>
+          <li><strong>Email:</strong> <a href="vicenteandresacevedoreyes@gmail.com">vicenteandresacevedoreyes@gmail.com</a></li>
+          <li><strong>Intereses:</strong> creacion de poryectos en python; Gaming</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="habilidades" class="container">
+      <h2>Habilidades</h2>
+      <div class="habilidades-grid">
+        <table class="tabla-tecnologias" summary="Tecnologías y nivel de dominio">
+          <thead>
+            <tr><th>Tecnología</th><th>Nivel</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HTML5</td><td>novato</td></tr>
+            <tr><td>CSS3</td><td>novato</td></tr>
+            <tr><td>JavaScript</td><td>aprendiz</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="proyectos" class="container">
+      <h2>Proyectos</h2>
+      <div class="galeria">
+        <article class="proyecto">
+          <img src="Captura de pantalla 2026-04-20 231436.png" alt="Captura proyecto 1" />
+          <h3>Proyecto 1</h3>
+          <p>proyecto en html con una escructura semantica.</p>
+          <p><a href="https://github.com/vicenteandresacevedoreyes-ux/proyecto_pacientes_certamen4/blob/main/pacientes_certamen.py" target="_blank" rel="noopener">Ver repositorio</a></p>
+        </article>
+
+        <article class="proyecto">
+          <img src="proyecto2.png" alt="Captura proyecto 2" />
+          <h3>Proyecto 2</h3>
+          <p>Descripción breve del proyecto y tecnologías usadas.</p>
+          <p><a href="https://github.com/vicenteandresacevedoreyes-ux/manejo_usuarios/blob/main/ManejaUsuarios.py" target="_blank" rel="noopener">Ver repositorio</a></p>
+        </article>
+        <!-- Añade más proyectos según necesites -->
+      </div>
+    </section>
+
+    <section id="contacto" class="container">
+      <h2>Contacto</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <div class="form-row">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Correo</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Asunto</label>
+          <input id="subject" name="subject" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+        </div>
+
+        <div class="form-row">
+          <button type="submit">Enviar</button>
+        </div>
+
+        <p id="formStatus" aria-live="polite" class="form-status"></p>
+      </form>
+    </section>
   </main>
- 
+
   <footer class="site-footer">
-    <p>&copy; 2026 MiSitio. Todos los derechos reservados.</p>
+    <div class="container footer-inner">
+      <div class="redes">
+        <a href="https://x.com/Vicente01138143">Twitter</a>
+        <a href="https://github.com/vicenteandresacevedoreyes-ux?tab=repositories">GitHub</a>
+      </div>
+      <p class="creditos">© <span id="year"></span> vicente acevedo. Todos los derechos reservados.</p>
+    </div>
   </footer>
-</div>
 
+  <script>
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function(e) {
+      if (!form.checkValidity()) {
+      
+        status.textContent = 'Por favor completa los campos requeridos.';
+        return;
+      }
+      e.preventDefault();
+      
+      status.textContent = 'Mensaje enviado. Gracias por contactarme.';
+      form.reset();
+    });
+
+    // Toggle menú para pantallas pequeñas
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav ul');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
