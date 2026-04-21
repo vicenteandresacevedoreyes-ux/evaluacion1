@@ -11,7 +11,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="logo"></a>
-      <nav class="main-nav" aria-label="Navegación principal">
+      <nav class="main-nav" aria-label="Navegación principal" id="nav-list">
         <ul>
           <li><a href="#sobre">Sobre mí</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
@@ -37,8 +37,8 @@
         <ul>
           <li><strong>Edad:</strong> 19 años</li>
           <li><strong>Ciudad:</strong> curanilahue, Chile</li>
-          <li><strong>Email:</strong> <a href="vicenteandresacevedoreyes@gmail.com">vicenteandresacevedoreyes@gmail.com</a></li>
-          <li><strong>Intereses:</strong> creacion de poryectos en python; Gaming</li>
+          <li><strong>Email:</strong> <a>vicenteandresacevedoreyes@gmail.com</a></li>
+          <li><strong>Intereses:</strong> creacion de proyectos en python; Gaming</li>
         </ul>
       </aside>
     </section>
@@ -139,8 +139,6 @@
       status.textContent = 'Mensaje enviado. Gracias por contactarme.';
       form.reset();
     });
-
-    // Toggle menú para pantallas pequeñas
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav ul');
     toggle.addEventListener('click', () => {

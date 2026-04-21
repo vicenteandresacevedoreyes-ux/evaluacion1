@@ -1,7 +1,7 @@
 :root{
   --bg:#9cbcdc;
-  --primary:#0b6cf6;
-  --accent:#0a58d8;
+  --primary:#020000;
+  --accent:#3a96d7;
   --muted:#000000;
   --card:#ffffff;
   --radius:10px;
@@ -26,7 +26,7 @@ body{
   padding:1rem;
 }
 
-Header 
+
 .site-header{
   background:linear-gradient(90deg,var(--primary),var(--accent));
   color:#ff0000;
@@ -41,7 +41,7 @@ Header
   gap:var(--gap);
   padding:0.75rem 1rem;
 }
-.logo{font: weight 400px;; text-decoration:none; color:#f41818}
+.logo{font-weight: 400;font-size: 1rem; text-decoration:none; color:#000000}
 .main-nav ul{
   display:flex;
   gap:1rem;
@@ -89,14 +89,14 @@ button[type="submit"]{background:var(--primary); color:#fff; border:none; paddin
 button[type="submit"]:hover{background:var(--accent)}
 
 
-.site-footer{padding:1rem 0; background:#0f1724; color:#fff}
+.site-footer{padding:1rem 0; background:#000000; color:#ffffff}
 .footer-inner{display:flex; justify-content:space-between; align-items:center; gap:1rem}
-.redes a{color:#fff; margin-right:0.75rem; text-decoration:none}
+.redes a{color:#ffffff; margin-right:0.75rem; text-decoration:none}
 
 
 @media (max-width:900px){
   .hero{grid-template-columns:1fr}
   .main-nav ul{display:none}
-  .main-nav ul.open{display:flex; flex-direction:column; background:rgba(255,255,255,0.03); position:absolute; right:1rem; top:64px; padding:0.5rem; border-radius:8px}
+  .main-nav ul.open{display:flex; flex-direction:column; background:rgba(0, 0, 0, 0.03); position:absolute; right:1rem; top:64px; padding:0.5rem; border-radius:8px}
   .menu-toggle{display:inline-block}
 }
